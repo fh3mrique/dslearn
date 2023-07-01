@@ -14,3 +14,6 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
 
 INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Bootcamp HTML', 'https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1551437392/img/co_img_1518_1631724053.png', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLVCxxU23q8IdXbL2u2WMIiTIVZyq7ma_kUJoznNdTr9KajHLFDkRcjFDftIV-f7VGWng&usqp=CAU')
+
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES (1.0, TIMESTAMP WITH TIME ZONE '2023-07-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2024-07-14T10:00:00Z', 1)
+INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES (2.0, TIMESTAMP WITH TIME ZONE '2023-09-14T10:00:00Z', TIMESTAMP WITH TIME ZONE '2024-09-14T10:00:00Z', 1)
