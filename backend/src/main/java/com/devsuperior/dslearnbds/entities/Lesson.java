@@ -19,7 +19,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_course")
+@Table(name = "tb_lesson")
 /*A anotação @Inheritance é usada em frameworks de persistência, como o Java Persistence API (JPA), para 
  definir a estratégia de herança a ser usada em uma hierarquia de classes.*/
 /*A anotação @Inheritance com a estratégia InheritanceType.JOINED é usada para definir a herança entre 

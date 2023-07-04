@@ -1,10 +1,13 @@
 package com.devsuperior.dslearnbds.entities;
 
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
@@ -24,6 +27,11 @@ public class Enrollment {
 	private Instant refundMoment;
 	private boolean available;
 	private boolean onlyUpdate;
+	
+	/*Mapeamento ManyToMany da volta. A matricula(Enrollment) deve conhecer as 
+	 aula(Lesson) que já foram terminadas*/
+	@ManyToMany(mappedBy = "enrollmentsDone")
+	private Set<Lesson> LessonDone = new HashSet<>();
 	
 	public Enrollment() {
 		

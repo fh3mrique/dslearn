@@ -29,3 +29,21 @@ INSERT INTO tb_section(title, description, position, img_Uri, resource_id, prere
 /*matriculando o usuario com id na oferta 1*/
 INSERT INTO tb_enrollment(user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES(1, 1, TIMESTAMP WITH TIME ZONE '2023-07-14T10:00:00Z', null, true, false)
 INSERT INTO tb_enrollment(user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES(2, 1, TIMESTAMP WITH TIME ZONE '2023-07-14T10:00:00Z', null, true, false)
+
+                                      /*CADASTARNDO 3 AULAS DE CONTEUDO NA setion1 'capitulo 1*/
+INSERT INTO tb_lesson(title, position, section_id) VALUES ('Aula 1 do capitulo 1', 1, 1);
+INSERT INTO tb_content(id, text_Content, video_Uri) VALUES (1, 'Descrição da aula', 'Link da aula');
+
+INSERT INTO tb_lesson(title, position, section_id) VALUES ('Aula 2 do capitulo 1', 2, 1);
+INSERT INTO tb_content(id, text_Content, video_Uri) VALUES (2,  'Descrição da aula', 'Link da aula');
+
+INSERT INTO tb_lesson(title, position, section_id) VALUES ('Aula 3 do capitulo 1', 3, 1);
+INSERT INTO tb_content(id, text_Content, video_Uri) VALUES (3, 'Descrição da aula', 'Link da aula');
+
+INSERT INTO tb_lesson(title, position, section_id) VALUES ('Tarefa capitulo 1', 4, 1);
+INSERT INTO tb_task(id, description, question_Count, approval_Count, weight, due_Date) VALUES (4, 'descrição tarefa', 5, 3, 1.0, TIMESTAMP WITH TIME ZONE '2023-07-25T10:00:00Z');
+
+/*O USÚARIO DESSA MATRICULA TERMINOU ESSA AULA tb_lesson_done*/
+/*A aula 1e 2 foi terminada pelo usuario com name 'Alex Brown' na oferta 1 edition 1.0*/
+INSERT INTO tb_lesson_done(lesson_id, user_id, offer_id) VALUES (1, 1, 1)
+INSERT INTO tb_lesson_done(lesson_id, user_id, offer_id) VALUES (2, 1, 1)
