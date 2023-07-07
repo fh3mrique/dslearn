@@ -103,6 +103,10 @@ public abstract class Lesson  implements Serializable{
 	public Set<Enrollment> getEnrollmentsDone() {
 		return enrollmentsDone;
 	}
+	
+	public List<Deliver> getDeliveries() {
+		return deliveries;
+	}
 
 	@Override
 	public int hashCode() {
